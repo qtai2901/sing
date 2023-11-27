@@ -81,7 +81,7 @@
       "mtu": 9000,
       "auto_route": true,
       "strict_route": true,
-      "sniff": false,
+      "sniff": true,
       "endpoint_independent_nat": false,
       "stack": "system",
       "platform": {
@@ -96,7 +96,7 @@
       "type": "mixed",
       "listen": "127.0.0.1",
       "listen_port": 2080,
-      "sniff": false,
+      "sniff": true,
       "users": []
     }
   ],
@@ -105,11 +105,16 @@
       "tag":"Proxy",
       "type":"selector",
       "outbounds":[
-        "auto",
         "direct",
         "{all}"
       ]
     },
+    {
+      "tag":"auto",
+      "type":"urltest",
+      "outbounds":[
+        "{all}"
+      ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "1m",
       "tolerance": 50
@@ -148,7 +153,7 @@
         "port": 443,
         "outbound": "block"
       },
-      
+    
       {
         "clash_mode": "direct",
         "outbound": "direct"
@@ -166,7 +171,7 @@
         ],
         "outbound": "direct"
       }
-     
+      
     ]
   },
   "experimental": {
