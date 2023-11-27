@@ -8,7 +8,7 @@
       {
         "tag": "proxyDns",
         "address": "8.8.8.8",
-        "detour": "proxy"
+        "detour": "Proxy"
       },
       {
         "tag": "localDns",
@@ -102,7 +102,7 @@
   ],
   "outbounds": [
     {
-      "tag":"proxy",
+      "tag":"Proxy",
       "type":"selector",
       "outbounds":[
         "auto",
@@ -135,7 +135,7 @@
   ],
   "route": {
     "auto_detect_interface": true,
-    "final": "proxy",
+    "final": "Proxy",
     "geoip": {
       "download_url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.db",
       "download_detour": "direct"
@@ -154,14 +154,13 @@
         "port": 443,
         "outbound": "block"
       },
-     
       {
         "clash_mode": "direct",
         "outbound": "direct"
       },
       {
         "clash_mode": "global",
-        "outbound": "proxy"
+        "outbound": "Proxy"
       },
       {
         "domain": [
@@ -172,8 +171,6 @@
         ],
         "outbound": "direct"
       }
-      
-     
     ]
   },
   "experimental": {
@@ -183,7 +180,7 @@
       "external_ui_download_detour": "",
       "external_ui": "ui",
       "secret": "",
-      "_mode": "rule",
+      "default_mode": "rule",
       "store_selected": true,
       "cache_file": "",
       "cache_id": ""
