@@ -102,7 +102,7 @@
   ],
   "outbounds": [
     {
-      "tag":"Proxy",
+      "tag":"proxy",
       "type":"selector",
       "outbounds":[
         "auto",
@@ -111,7 +111,7 @@
       ]
     },
     {
-      "tag":"Auto",
+      "tag":"auto",
       "type":"urltest",
       "outbounds":[
         "{all}"
@@ -183,7 +183,7 @@
       "external_ui_download_detour": "",
       "external_ui": "ui",
       "secret": "",
-      "default_mode": "rule",
+      "_mode": "rule",
       "store_selected": true,
       "cache_file": "",
       "cache_id": ""
