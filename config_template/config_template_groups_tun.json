@@ -24,12 +24,11 @@
         "address": "fakeip"
       }
     ],
-    "globals": [
+    "rules": [
       {
-        "domain": [
-          "ghproxy.com",
-          "cdn.jsdelivr.net",
-          "testingcf.jsdelivr.net"
+        "domain_suffix": [
+          ".arpa.",
+          ".arpa"
         ],
         "server": "localDns"
       },
@@ -51,7 +50,7 @@
         "server": "localDns"
       },
       {
-        "clash_mode": "global",
+        "clash_mode": "rule",
         "server": "proxyDns"
       },
       {
@@ -126,14 +125,14 @@
     "auto_detect_interface": true,
     "final": "Proxy",
     "geoip": {
-      "download_url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-globals-dat@release/geoip.db",
+      "download_url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.db",
       "download_detour": "direct"
     },
     "geosite": {
-      "download_url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-globals-dat@release/geosite.db",
+      "download_url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.db",
       "download_detour": "direct"
     },
-    "globals": [
+    "rules": [
       {
         "protocol": "dns",
         "outbound": "dns-out"
@@ -149,15 +148,13 @@
         "outbound": "direct"
       },
       {
-        "clash_mode": "global",
+        "clash_mode": "rule",
         "outbound": "Proxy"
       },
       {
-        "domain": [
-          "clash.razord.top",
-          "yacd.metacubex.one",
-          "yacd.haishan.me",
-          "d.metacubex.one"
+        "domain_suffix": [
+          ".arpa.",
+          ".arpa"
         ],
         "outbound": "direct"
       }
@@ -171,7 +168,7 @@
       "external_ui_download_detour": "",
       "external_ui": "ui",
       "secret": "",
-      "default_mode": "global",
+      "default_mode": "rule",
       "store_selected": true,
       "cache_file": "",
       "cache_id": ""
