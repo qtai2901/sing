@@ -62,166 +62,49 @@
       "type": "mixed"
     }
   ],
- "outbounds": [
+  "outbounds": [
     {
       "type": "selector",
       "tag": "Internet",
       "outbounds": [
-        "shadowsocks-out",
-        "trojan-out",
-        "vmess-out",
-        "vless-out",
-        "tuic-out"
-      ],
-      "default": "shadowsocks-out"
+        "Best Latency",
+        "xxx"
+      ]
     },
     {
-      "type": "selector",
-      "tag": "openai",
+      "type": "urltest",
+      "tag": "Best Latency",
       "outbounds": [
-        "shadowsocks-out",
-        "trojan-out",
-        "vmess-out",
-        "vless-out",
-        "tuic-out"
+        "xxx"
       ],
-      "default": "shadowsocks-out"
+      "url": "https://detectportal.firefox.com/success.txt",
+      "interval": "1m0s"
     },
     {
-      "type": "trojan",
-      "tag": "trojan-out",
-      "server": "xxx",
-      "server_port": 9443,
-      "password": "xxx",
-      "tls": {
-        "enabled": true,
-        "server_name": "xxx",
-        "insecure": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "multiplex": {
-        "enabled": true,
-        "protocol": "h2mux",
-        "max_connections": 4,
-        "min_streams": 4,
-        "padding": true
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "TunService"
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-out",
-      "method": "2022-blake3-aes-128-gcm",
-      "password": "xxx",
-      "detour": "shadowtls-out",
-      "udp_over_tcp": {
-        "enabled": false,
-        "version": 2
-      },
-      "multiplex": {
-        "enabled": true,
-        "protocol": "h2mux",
-        "max_connections": 4,
-        "min_streams": 4,
-        "padding": true
-      }
-    },
-    {
-      "type": "shadowtls",
-      "tag": "shadowtls-out",
-      "server": "xxx",
-      "server_port": 8443,
-      "version": 3,
-      "password": "xxx",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.lovelive-anime.jp",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
+      "tag": "xxx",
       "type": "vmess",
-      "tag": "vmess-out",
       "server": "xxx",
-      "server_port": 6443,
+      "server_port": 80,
       "uuid": "xxx",
-      "alter_id": 0,
       "security": "auto",
+      "alter_id": 0,
       "global_padding": false,
       "authenticated_length": true,
-      "domain_strategy": "ipv4_only",
-      "tls": {
-        "enabled": true,
-        "disable_sni": false,
-        "server_name": "xxx",
-        "insecure": true,
-        "alpn": [
-          "http/1.1",
-          "h2"
-        ]
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "TunService"
-      },
       "multiplex": {
-        "enabled": true,
+        "enabled": false,
         "protocol": "smux",
-        "max_connections": 4,
-        "min_streams": 4,
-        "max_streams": 0
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "vless-out",
-      "server": "xxx",
-      "server_port": 5443,
-      "uuid": "xxx",
-      "flow": "",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.lovelive-anime.jp",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "xxx",
-          "short_id": "6ba85179e30d4fc2"
-        }
+        "max_streams": 32
       },
-      "packet_encoding": "xudp",
       "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
-      }
-    },
-    {
-      "type": "tuic",
-      "tag": "tuic-out",
-      "server": "",
-      "server_port": 443,
-      "uuid": "xxx",
-      "password": "xxx",
-      "congestion_control": "bbr",
-      "tls": {
-        "enabled": true,
-        "server_name": "xxx",
-        "alpn": [
-          "h3"
-        ]
-      }
+        "type": "ws",
+        "path": "xxx",
+        "headers": {
+          "Host": "xxx"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "xxx"
+      },
+      "domain_strategy": "ipv4_only"
     },
     {
       "type": "direct",
