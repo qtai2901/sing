@@ -24,7 +24,7 @@
         "address": "fakeip"
       }
     ],
-    "globals": [
+    "rules": [
       {
         "domain": [
           "ghproxy.com",
@@ -51,7 +51,7 @@
         "server": "localDns"
       },
       {
-        "clash_mode": "global",
+        "clash_mode": "rule",
         "server": "proxyDns"
       },
       {
@@ -133,7 +133,7 @@
       "download_url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-globals-dat@release/geosite.db",
       "download_detour": "direct"
     },
-    "globals": [
+    "rules": [
       {
         "protocol": "dns",
         "outbound": "dns-out"
