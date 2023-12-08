@@ -126,12 +126,12 @@
     "auto_detect_interface": true,
     "final": "Proxy",
     "geoip": {
-      "download_url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-globals-dat@release/geoip.db",
-      "download_detour": "direct"
+      "download_url": "https://github.com/malikshi/sing-box-geo/releases/latest/download/geoip.db",
+      "download_detour": "Best Latency"
     },
     "geosite": {
-      "download_url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-globals-dat@release/geosite.db",
-      "download_detour": "direct"
+      "download_url": "https://github.com/malikshi/v2ray-rules-dat/releases/latest/download/geosite.db",
+      "download_detour": "Best Latency"
     },
     "rules": [
       {
