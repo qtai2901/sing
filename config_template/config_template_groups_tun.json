@@ -127,11 +127,11 @@
     "final": "Proxy",
     "geoip": {
       "download_url": "https://github.com/malikshi/sing-box-geo/releases/latest/download/geoip.db",
-      "download_detour": "Best Latency"
+      "download_detour": "direct"
     },
     "geosite": {
       "download_url": "https://github.com/malikshi/v2ray-rules-dat/releases/latest/download/geosite.db",
-      "download_detour": "Best Latency"
+      "download_detour": "direct"
     },
     "rules": [
       {
