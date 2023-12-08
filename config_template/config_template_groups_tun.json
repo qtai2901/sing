@@ -13,7 +13,7 @@
       {
         "tag": "localDns",
         "address": "https://223.5.5.5/dns-query",
-        "detour": "Best Latency"
+        "detour": "direct"
       },
       {
         "tag": "block",
@@ -47,7 +47,7 @@
         "server": "localDns"
       },   
       {
-        "clash_mode": "Best Latency",
+        "clash_mode": "direct",
         "server": "localDns"
       },
       {
@@ -105,13 +105,13 @@
       "tag":"Proxy",
       "type":"selector",
       "outbounds":[
-        "Best Latency",
+        "direct",
         "{all}"
       ]
     },
     {
-      "type": "Best Latency",
-      "tag": "Best Latency"
+      "type": "direct",
+      "tag": "direct"
     },
     {
       "type": "dns",
@@ -145,8 +145,8 @@
       },
     
       {
-        "clash_mode": "Best Latency",
-        "outbound": "Best Latency"
+        "clash_mode": "direct",
+        "outbound": "direct"
       },
       {
         "clash_mode": "global",
@@ -159,7 +159,7 @@
           "yacd.haishan.me",
           "d.metacubex.one"
         ],
-        "outbound": "Best Latency"
+        "outbound": "direct"
       }
       
     ]
@@ -167,13 +167,13 @@
   "experimental": {
     "clash_api": {
       "external_controller": "127.0.0.1:9090",
-      "external_ui_download_url": "https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip",
-      "external_ui_download_detour": "Internet",
+      "external_ui_download_url": "",
+      "external_ui_download_detour": "",
       "external_ui": "ui",
       "secret": "",
       "default_mode": "rule",
       "store_selected": true,
-      "cache_file": "clash.db",
+      "cache_file": "",
       "cache_id": ""
     }
   }
